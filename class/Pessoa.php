@@ -4,14 +4,12 @@
 class Pessoa
 {
     public $nome;
-    public $cpf;
     public $dataNasc;
 
-    public function __construct($nomePessoa, $cpfPessoa, $dataNascPessoa) // Método da classe no PHP - Inicializar qualquer Objeto
+    public function __construct($nomePessoa, $dataNascPessoa) // Método da classe no PHP - Inicializar qualquer Objeto
     {
         //validarIdade(); -- Executar antes de inderir Cpf - Chamando Método dentro da própria Classe
         $this->nome = $nomePessoa;
-        $this->cpf = $cpfPessoa;
         $this->dataNasc = $dataNascPessoa;
 
         /*
@@ -64,11 +62,21 @@ class Pessoa
 
 Class PessoaFisica extends Pessoa //Herdando os Atributos da Classe Pessoa
 {
-    //No index, também é obrigado colocar o Cpf, pois na Classe Pessoa tem o Método __construct
+    //Se o cpf estivesse no Método __construct da Classe Pessoa, no index, também seria obrigado colocar o Cpf na Instância
+    public $cpf;
 
+    public function __construct($cpfPessoaF)
+    {
+        $this->cpf = $cpfPessoaF;
+    }
 }
 
 Class PessoaJuridica extends Pessoa //Herdando os Atributos da Classe Pessoa
 {
-    
+    public $cnpj;
+
+    public function __construct($cnpjPessoaJ)
+    {
+        $this->cnpj = $cnpjPessoaJ;
+    }
 }
