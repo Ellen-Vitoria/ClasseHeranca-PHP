@@ -3,14 +3,16 @@
 // Parâmetro = Argumento
 class Pessoa
 {
+    public $nome;
     public $cpf;
     public $dataNasc;
 
-    public function __construct($cpf, $dataNasc) // Método da classe no PHP - Inicializar qualquer Objeto
+    public function __construct($nomePessoa, $cpfPessoa, $dataNascPessoa) // Método da classe no PHP - Inicializar qualquer Objeto
     {
         //validarIdade(); -- Executar antes de inderir Cpf - Chamando Método dentro da própria Classe
-        $this->cpf = $cpf;
-        $this->dataNasc = $dataNasc;
+        $this->nome = $nomePessoa;
+        $this->cpf = $cpfPessoa;
+        $this->dataNasc = $dataNascPessoa;
 
         /*
             -- Poderia colocar:
@@ -58,4 +60,15 @@ class Pessoa
     {
         return true;
     }
+}
+
+Class PessoaFisica extends Pessoa //Herdando os Atributos da Classe Pessoa
+{
+    //No index, também é obrigado colocar o Cpf, pois na Classe Pessoa tem o Método __construct
+
+}
+
+Class PessoaJuridica extends Pessoa //Herdando os Atributos da Classe Pessoa
+{
+    
 }
