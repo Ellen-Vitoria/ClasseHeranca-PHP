@@ -39,7 +39,7 @@ class Pessoa
 
 
        /* Ou -- Para Validações, este é o recomendado:
-            $resultFormat = date("2020-05-04", strtotime($dataNasc)); 
+            $resultFormat = date("d/m/Y", strtotime($this->$dataNasc)); 
               return $resultFormat;
        */      
     }
@@ -51,10 +51,6 @@ class Pessoa
     */
 
     public function validarIdade()
-    {
-        return true;
-    }
-    public function validarCpf()
     {
         return true;
     }
