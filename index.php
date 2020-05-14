@@ -11,7 +11,8 @@ echo "<p>Nome da Pessoa: {$pessoa->nome}</p><p>Data de Nasc: {$resultDtNascForma
 
 
 $produto = new Produto("Fone", 50.0);
-echo "<p>Nome do Produto: {$produto->nome}</p><p>Preco: {$produto->preco}";
+//Como na Classe Produto, a Variável $preço já é formatada, então não precisa chamar o Método, como o exemplo anterior da Classe Pessoa
+echo "<p>Nome do Produto: {$produto->nome}</p><p>Preco: {$produto->preco}"; 
 
 
 $pessoaf = new PessoaFisica("Person 2", "2002-05-04");
