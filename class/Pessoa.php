@@ -1,8 +1,7 @@
 <?php
-
-// Parâmetro = Argumento
 class Pessoa
 {
+    // Visibilidade do Atributo: public, private, protected
     public $nome;
     public $dataNasc;
 
@@ -56,7 +55,7 @@ class Pessoa
     }
 }
 
-Class PessoaFisica extends Pessoa //Herdando os Atributos da Classe Pessoa
+class PessoaFisica extends Pessoa //Herdando os Atributos da Classe Pessoa - Poderia estar em um novo Arquivo.php
 {
     //Se o cpf estivesse no Método __construct da Classe Pessoa, no index, também seria obrigado colocar o Cpf na Instância
     public $cpf;
@@ -67,7 +66,7 @@ Class PessoaFisica extends Pessoa //Herdando os Atributos da Classe Pessoa
     }
 }
 
-Class PessoaJuridica extends Pessoa //Herdando os Atributos da Classe Pessoa
+class PessoaJuridica extends Pessoa //Herdando os Atributos da Classe Pessoa
 {
     public $cnpj;
 
